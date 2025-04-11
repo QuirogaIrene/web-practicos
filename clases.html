@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dekus Fit</title>
+        <link rel="stylesheet" href="style.css">
+      </head>
+<body>
+    <div data-include="header.html"></div>
+    <section class="filtros-clases">
+        <h1 class="titulo-clases">Explorá nuestras clases</h1>
+      
+        <!-- Filtros -->
+        <input type="radio" name="filtro" id="todas" checked>
+        <input type="radio" name="filtro" id="musculacion">
+        <input type="radio" name="filtro" id="crossfit">
+        <input type="radio" name="filtro" id="yoga">
+        <input type="radio" name="filtro" id="spinning">
+        <input type="radio" name="filtro" id="pilates">
+        <input type="radio" name="filtro" id="cardio">
+        <input type="radio" name="filtro" id="zumba">
+        <input type="radio" name="filtro" id="hiit">
+      
+        <div class="filtros-menu">
+          <label for="todas">Todas</label>
+          <label for="musculacion">Musculación</label>
+          <label for="crossfit">CrossFit</label>
+          <label for="yoga">Yoga</label>
+          <label for="spinning">Spinning</label>
+          <label for="pilates">Pilates</label>
+          <label for="cardio">Cardio</label>
+          <label for="zumba">Zumba</label>
+          <label for="hiit">HIIT</label>
+        </div>
+      
+        <!-- Galería de clases -->
+        <div class="galeria-clases">
+          <div class="clase musculacion"><img src="images/musculacion.jpg"><p>Musculación</p></div>
+          <div class="clase crossfit"><img src="images/crossfit.jpg"><p>CrossFit</p></div>
+          <div class="clase yoga"><img src="images/yoga.jpg"><p>Yoga</p></div>
+          <div class="clase spinning"><img src="images/spinning.jpg"><p>Spinning</p></div>
+          <div class="clase pilates"><img src="images/pilates.jpg"><p>Pilates</p></div>
+          <div class="clase cardio"><img src="images/cardio.jpg"><p>Cardio</p></div>
+          <div class="clase zumba"><img src="images/zumba.jpg"><p>Zumba</p></div>
+          <div class="clase hiit"><img src="images/hiit.jpg"><p>HIIT</p></div>
+        </div>
+      </section>
+      <section class="horarios">
+        <h2 class="titulo-horarios">Abierto desde 6:00 a 23:00 hs</h2>
+        <div class="tabla-horarios">
+          <table>
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sábado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>6:00</td><td>Musculación</td><td>HIIT</td><td>Cardio</td><td>Zumba</td><td>Yoga</td><td>Spinning</td></tr>
+              <tr><td>8:00</td><td>CrossFit</td><td>Pilates</td><td>Stretching</td><td>Musculación</td><td>HIIT</td><td>Cardio</td></tr>
+              <tr><td>10:00</td><td>Yoga</td><td>Cardio</td><td>Spinning</td><td>Zumba</td><td>Funcional</td><td>Stretching</td></tr>
+              <tr><td>12:00</td><td>Pilates</td><td>Funcional</td><td>HIIT</td><td>Musculación</td><td>CrossFit</td><td>Pilates</td></tr>
+              <tr><td>15:00</td><td>Cardio</td><td>Zumba</td><td>Yoga</td><td>Stretching</td><td>Spinning</td><td>HIIT</td></tr>
+              <tr><td>17:00</td><td>Spinning</td><td>Pilates</td><td>Musculación</td><td>Cardio</td><td>CrossFit</td><td>Yoga</td></tr>
+              <tr><td>19:00</td><td>Zumba</td><td>Yoga</td><td>HIIT</td><td>Funcional</td><td>Spinning</td><td>Cardio</td></tr>
+              <tr><td>21:00</td><td>Funcional</td><td>Stretching</td><td>CrossFit</td><td>Pilates</td><td>Yoga</td><td>Zumba</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      <div data-include="footer.html"></div> 
+      <script src="js/include.js"></script>
+      <script src="js/modoscuro.js"></script>
+</body>
+</html>

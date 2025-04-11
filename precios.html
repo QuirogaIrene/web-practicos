@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dekus Fit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div data-include="header.html"></div>
+    <section class="pricing-section" id="precios">
+      <h2 class="section-title">Planes de Suscripción</h2>
+    
+      <!-- Toggle Mensual / Anual -->
+      <div class="toggle-wrapper" role="group" aria-label="Cambiar entre mensual y anual">
+        <input type="checkbox" id="planToggle" class="toggle-checkbox" />
+        <label for="planToggle" class="toggle-label" aria-hidden="true">
+          <span>Mensual</span>
+          <span>Anual</span>
+        </label>
+      </div>
+    
+      <!-- Tabla de precios -->
+      <div class="plans-container">
+        <article class="plan-card">
+          <svg class="plan-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L2 7h20L12 2z" />
+          </svg>
+          <h3>Básico</h3>
+          <p class="price" data-monthly="$9.000" data-yearly="$99.000">$9.000</p>
+          <ul>
+            <li><span class="tooltip" aria-label="Incluye acceso limitado a máquinas">Acceso básico</span></li>
+            <li><span class="tooltip" aria-label="Solo en horario laboral">Horario reducido</span></li>
+            <li><span class="tooltip" aria-label="Una clase grupal al mes">Clase grupal mensual</span></li>
+          </ul>
+          <button class="cta-button" aria-label="Elegir plan básico">Elegir</button>
+        </article>
+    
+        <article class="plan-card">
+          <svg class="plan-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L2 7h20L12 2z" />
+          </svg>
+          <h3>Pro</h3>
+          <p class="price" data-monthly="$19.000" data-yearly="$179.000">$19.000</p>
+          <ul>
+            <li><span class="tooltip" aria-label="Acceso total al gimnasio">Acceso completo</span></li>
+            <li><span class="tooltip" aria-label="Clases grupales ilimitadas">Clases ilimitadas</span></li>
+            <li><span class="tooltip" aria-label="Evaluaciones físicas incluidas">Evaluaciones físicas</span></li>
+          </ul>
+          <button class="cta-button" aria-label="Elegir plan pro">Elegir</button>
+        </article>
+    
+        <article class="plan-card destacado">
+          <svg class="plan-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2L2 7h20L12 2z" />
+          </svg>
+          <h3>Elite</h3>
+          <p class="price" data-monthly="$29.000" data-yearly="$269.000">$29.000</p>
+          <ul>
+            <li><span class="tooltip" aria-label="Entrenamiento personalizado diario">Personal Trainer</span></li>
+            <li><span class="tooltip" aria-label="Acceso a spa y masajes">Spa & Masajes</span></li>
+            <li><span class="tooltip" aria-label="Descuentos en suplementos">Descuentos exclusivos</span></li>
+          </ul>
+          <button class="cta-button" aria-label="Elegir plan elite">Elegir</button>
+        </article>
+      </div>
+    </section>
+    
+    <div data-include="footer.html"></div>
+    <script src="js/include.js"></script>
+    <script src="js/modoscuro.js"></script>
+</body>

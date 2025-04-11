@@ -1,0 +1,1651 @@
+/* styles.css */
+
+body {
+  background-color: #383838;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333; /* Gris oscuro */
+  color: #ffffff;
+  padding: 10px 30px;
+  height: auto;
+  flex-wrap: wrap; /* Evita que se rompa si el espacio es muy chico */
+}
+.logo-img {
+  width: 170px;
+  height: auto;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+}
+  /* Contenedor principal del nav */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    padding: 20px;
+  }
+  /* Menú principal */
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    margin: 0;
+    padding: 0;
+  }
+  .menu li {
+    position: relative;
+  }
+  /* Links principales */
+  .menu > li > a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 20px;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  .menu > li > a:hover {
+    background-color: #444;
+    border-radius: 5px;
+  }
+  
+  /* Submenús */
+  .menu .submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffd700;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    top: 100%;
+    min-width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  .menu li:hover .submenu {
+    display: block;
+  }
+  .menu .submenu li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .menu .submenu li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid black;
+  }
+
+  /*---- HOME-INICIO---*/
+  /*----BOTON CTA - hero video ----*/
+  a.cta {
+    background-color: #ffd900;
+    color: #000000;
+    padding: 15px 25px;
+    margin: 0 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  a.cta:hover {
+    background-color: #ffd700;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .hero-video {
+    position: relative;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+  }
+  .hero-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir toda el area */
+  }
+  .overlay-text {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente */
+    text-align: center; /* Texto alineado al centro */
+    color: #ffffff; /* Texto blanco */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes suaves */
+    width: 100%;
+  }
+  .overlay-text h1 {
+    font-size: 3em; /* Titulo principal grande */
+    margin: 0 0 10px 0; /* Espaciado entre titulos*/
+    animation: slideIn 2s ease-in-out; /* Animacion*/
+  }
+  .overlay-text h2 {
+    font-size: 2.5em; /* Subtitulo algo mas pequeño */
+    margin: 10px 0; /* Espaciado entre subtitulo y texto */
+    animation: fadeIn 3s ease-in-out; /* Animacion de opacidad */
+  }
+  .overlay-text p {
+    font-size: 1.5em; /* Texto descriptivo más pequeño */
+    margin: 10px 0 0; /* Espaciado inferior */
+    animation: fadeIn 3s ease-in-out; /* Animación de opacidad */
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(-30px); /* Comienza mas arriba */
+      opacity: 0; /* Invisibilidad inicial */
+    }
+    to {
+      transform: translateY(0); /* Llega a posicin original */
+      opacity: 1; /* Completamente visible */
+    }
+  } 
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Invisibilidad inicial */
+    }
+    to {
+      opacity: 1; /* Completamente visible */
+    }
+  }
+/*---- FIN BOTON CTA - hero video ----*/
+
+/*----CARD CLASES DESTACADAS----*/
+.clases-destacadas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-image: url('ruta-de-tu-imagen.jpg'); /* Opcional */
+  background-size: cover;
+  background-position: center;
+  gap: 40px;
+}
+.titulo-clases {
+  font-size: 2.5rem;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.clases-destacadas-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+.clases-destacadas-cards a {
+  text-decoration: none;
+  color: inherit;
+}
+.card {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-left: 5px solid #ffd700;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0;
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 300px;
+  max-width: 420px;
+  min-height: 220px; /* Más alto */
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.4);
+}
+.card-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.card-content h2 {
+  font-size: 1.8rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+.card-content p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin: 0;
+}
+.card-img {
+  width: 140px;
+  height: auto;
+  object-fit: cover;
+  border-left: 2px solid #444;
+  background-color: #fff;
+}
+/*----FIN CARD CLASES DESTACADAS----*/
+
+  /*----CARD CONTADOR----*/ 
+  .contador-blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #1e1e1e; /* fondo oscuro */
+    color: white;
+    gap: 20px;
+  }
+  .box {
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  .contador-box h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffd700;
+  }
+  .contador-box p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+/*---- FIN CARD CONTADOR----*/
+
+/*----CARD BLOG----*/   
+  .blog-box h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+  }
+  .blog-box p {
+    margin: 10px 0;
+    color: #ccc;
+  }
+  .boton-blog {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #1e1e1e;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .boton-blog:hover {
+    background-color: #e6c200;
+  }
+/*----FIN CARDBLOG----*/  
+  
+/*----TESTIMONIOS----*/
+.testimonios {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background-color: #222;
+}
+.testimonios-carousel {
+  display: flex;
+  width: calc(100vw * 5); /* Ahora con 5 testimonios */
+  animation: slide 30s infinite ease-in-out;
+}
+/* Pausar animación al pasar el mouse */
+.testimonios:hover .testimonios-carousel {
+  animation-play-state: paused;
+}
+.testimonio {
+  width: 100vw;
+  flex-shrink: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out;
+}
+.testimonio img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  margin-bottom: 10px;
+}
+.estrellas {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+/* Animación ajustada para 5 pasos */
+@keyframes slide {
+  0%   { transform: translateX(0vw); }
+  10%  { transform: translateX(0vw); }
+
+  20%  { transform: translateX(-100vw); }
+  30%  { transform: translateX(-100vw); }
+
+  40%  { transform: translateX(-200vw); }
+  50%  { transform: translateX(-200vw); }
+
+  60%  { transform: translateX(-300vw); }
+  70%  { transform: translateX(-300vw); }
+
+  80%  { transform: translateX(-400vw); }
+  90%  { transform: translateX(-400vw); }
+
+  100% { transform: translateX(0vw); }
+}
+.testimonios::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #ffd700;
+}
+/*----FIN TESTIMONIOS----*/ 
+/*----FIN HOME-INICIO----*/   
+
+/*----FOOTER----*/
+.footer {
+  background-color: #222;
+  color: white;
+  padding:40px 30px 10px;
+  font-family: sans-serif;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer .newsletter h3,
+.footer .social-links h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffd700;
+}
+.footer .newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.footer button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.footer button:hover {
+  background-color: #e6c200;
+}
+.footer .footer-image img {
+  width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+.footer .social-links a:hover {
+  color: #ffd700;
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.footer-map {
+  max-width: 250px;
+}
+.newsletter {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 300px;
+}
+.footer-map {
+  padding-right: 15px;
+  max-width: 250px;
+}
+/*----FIN FOOTER----*/
+
+
+/*----PAGINA CLASES----*/
+/* FILTROS */
+.filtros-clases {
+  padding: 40px 20px;
+  background: #1e1e1e;
+  color: #fff;
+  text-align: center;
+}
+.titulo-clases {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+.filtros-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.filtros-menu label {
+  padding: 8px 16px;
+  background: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: 1px solid #ffd700;
+  font-size: 0.9rem;
+}
+.filtros-menu label:hover {
+  background: #ffd700;
+  color: #000;
+}
+input[type="radio"] {
+  display: none;
+}
+/* GALERÍA */
+.galeria-clases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.clase {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+.clase:hover {
+  transform: scale(1.05);
+}
+.clase img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.7);
+}
+.clase p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* FILTRADO CON RADIO BUTTONS */
+#musculacion:checked ~ .galeria-clases .clase:not(.musculacion),
+#crossfit:checked ~ .galeria-clases .clase:not(.crossfit),
+#yoga:checked ~ .galeria-clases .clase:not(.yoga),
+#spinning:checked ~ .galeria-clases .clase:not(.spinning),
+#pilates:checked ~ .galeria-clases .clase:not(.pilates),
+#cardio:checked ~ .galeria-clases .clase:not(.cardio),
+#zumba:checked ~ .galeria-clases .clase:not(.zumba),
+#hiit:checked ~ .galeria-clases .clase:not(.hiit),
+#funcional:checked ~ .galeria-clases .clase:not(.funcional),
+#stretching:checked ~ .galeria-clases .clase:not(.stretching) {
+  display: none;
+}
+/* TABLA DE HORARIOS */
+.horarios {
+  background: #111;
+  padding: 40px 20px;
+  color: #fff;
+  text-align: center;
+  
+}
+.titulo-horarios {
+  font-size: 1.8rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+.tabla-horarios table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  max-width: 80%;
+  margin: 0 auto; 
+}
+.tabla-horarios th, .tabla-horarios td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+.tabla-horarios th {
+  background-color: #333;
+  color: #cdbb58;  
+}
+/* ANIMACIONES */
+.filtros-menu label:hover,
+.clase:hover,
+.tabla-horarios th {
+  transition: all 0.3s ease;
+}
+/* MICRO-INTERACCIONES */
+.filtros-menu label:active {
+  transform: scale(0.95);
+}
+/* SPINNER CARGA  */
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.spinner {
+  border: 4px solid #333;
+  border-top: 4px solid #ffd700;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spinner 1s linear infinite;
+  margin: 20px auto;
+}
+/*----FIN PAGINA CLASES----*/
+
+/*--- PAGINA ENTRENADORES ---*/
+:root {
+  --main-bg: #111;
+  --card-bg: #1e1e1e;
+  --accent: #ffd700;
+  --text: #fff;
+  --highlight: #333;
+}
+body.entrenadores-page {
+  background-color: var(--main-bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+}
+.entrenadores-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.entrenadores-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: var(--accent);
+}
+.entrenadores-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* --- Flip Card Layout --- */
+.card-wrapper {
+  width: 280px;
+  height: 400px;
+  perspective: 1000px;
+}
+.card-flip {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.card-wrapper:hover .card-flip,
+.card-wrapper:focus .card-flip {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: var(--card-bg);
+  backface-visibility: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Front face */
+.card-front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  overflow: hidden;
+}
+.clip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  border: none;
+}
+/* Back face */
+.card-back {
+  transform: rotateY(180deg);
+  text-align: left;
+  justify-content: center;
+}
+/* Texto */
+.card-front h3,
+.card-back h4 {
+  color: var(--accent);
+  margin: 10px 0 5px;
+}
+.especialidad {
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+/* Habilidades */
+.skill span {
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.skill {
+  width: 90%;
+  margin: 15px auto;
+  text-align: left;
+}
+.bar {
+  background: #444;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 12px;
+  margin-top: 4px;
+  width: 100%;
+}
+.fill {
+  background: var(--accent);
+  width: var(--fill);
+  height: 100%;
+  border-radius: 20px;
+  animation: grow 2s ease forwards;
+}
+.fill[style*="--fill"] {
+  width: var(--fill);
+}
+@keyframes grow {
+  0% { width: 0; }
+}
+/* Rating */
+.rating {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--accent);
+  animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+/* Accesibilidad */
+.card-wrapper:focus {
+  outline: 3px solid var(--accent);
+}
+/*--- FIN PAGINA ENTRENADORES ---*/
+
+/*---  PAGINA CONTACTO ---*/
+
+:root {
+  --main-bg: #111;
+  --form-bg: #363636;
+  --accent: #ffd900;
+  --text: #ffffff;
+  --input-bg: #262626;
+  --input-border: #767676;
+}
+/* Sección del formulario */
+.contact-section {
+  background-color: var(--main-bg);
+  color: var(--text);
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  scroll-snap-align: start;
+}
+.contact-title {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 40px;
+}
+/* Formulario */
+.contact-form {
+  display: grid;
+  gap: 20px;
+  background: var(--form-bg);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+input,
+select,
+textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text);
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+}
+.contact-form.intento-enviar input:invalid,
+.contact-form.intento-enviar select:invalid,
+.contact-form.intento-enviar textarea:invalid {
+  border-color: var(--error, red);
+}
+/* Botón enviar */
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--accent);
+  color: #111;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #e6c200;
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid #111;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+.hidden {
+  display: none;
+}
+/* Modal de confirmación */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal-content {
+  background-color: var(--form-bg);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--text);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.5s ease;
+}
+.check-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--accent);
+  margin-bottom: 20px;
+}
+.close-modal {
+  background-color: var(--accent);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #111;
+  font-weight: bold;
+  margin-top: 15px;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hidden {
+  display: none;
+}
+/*--- FIN PAGINA CONTACTO ---*/
+
+/*---  PAGINA PRECIO ---*/
+body {
+  --main-bg: #111;
+  --accent: #ffd700;
+  --text: #f5f5f5;
+  --card-bg: #1c1c1c;
+  --highlight: #333;
+  --border-color: #444;
+}
+body.modo-toggle {
+  --main-bg: #f5f5f5;
+  --accent: #ffd700;
+  --text: #1a1a1a;
+  --card-bg: #ffffff;
+  --highlight: #ddd;
+  --border-color: #bbb;
+}
+.pricing-section {
+  background-color: var(--main-bg);
+  color: var(--text);
+  padding: 80px 20px;
+  scroll-snap-align: start;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--accent);
+}
+/* Toggle Mensual / Anual */
+.toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.toggle-label {
+  background: var(--highlight);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text);
+}
+.toggle-label span {
+  padding: 6px 16px;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+.toggle-checkbox {
+  display: none;
+}
+.toggle-checkbox:checked + .toggle-label span:last-child {
+  background: var(--accent);
+  color: #111;
+}
+.toggle-checkbox:not(:checked) + .toggle-label span:first-child {
+  background: var(--accent);
+  color: #111;
+}
+/* Planes */
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  scroll-snap-align: start;
+}
+.plan-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+.plan-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+}
+.plan-card.destacado {
+  border: 2px solid var(--accent);
+}
+.plan-icon {
+  width: 50px;
+  height: 50px;
+  fill: var(--accent);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+.plan-card:hover .plan-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+.plan-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+.price {
+  font-size: 2rem;
+  margin: 15px 0;
+  font-weight: bold;
+}
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.plan-card li {
+  margin: 10px 0;
+  position: relative;
+}
+.tooltip {
+  position: relative;
+  cursor: help;
+  text-decoration: underline dotted var(--accent);
+}
+.tooltip::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent);
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+  font-size: 0.85rem;
+}
+.tooltip:hover::after {
+  opacity: 1;
+}
+.cta-button {
+  margin-top: 20px;
+  background: var(--accent);
+  border: none;
+  color: #111;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #e6c200;
+}
+/*--- FIN PAGINA PRECIO---*/
+
+/*--- PAGINA BLOG---*/
+body {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+/* Sección del blog centrada */
+.blog-section {
+  width: 90%;
+  margin: 0 auto;
+}
+/* Sección del blog con scroll snap */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 60px 20px;
+  scroll-snap-type: y mandatory;
+}
+/* Artículos */
+.blog-post {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 0.6s ease forwards;
+}
+.blog-post:hover {
+  transform: translateY(-5px);
+}
+.blog-post:nth-child(1) { animation-delay: 0.1s; }
+.blog-post:nth-child(2) { animation-delay: 0.2s; }
+.blog-post:nth-child(3) { animation-delay: 0.3s; }
+.blog-post:nth-child(4) { animation-delay: 0.4s; }
+.blog-post figure {
+  margin: 0;
+  position: relative;
+}
+.blog-post img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.blog-post figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 217, 0, 0.8);
+  color: #111;
+  padding: 6px 12px;
+  font-weight: bold;
+  border-top-right-radius: 10px;
+  font-size: 0.9rem;
+}
+/* Contenido del post */
+.blog-post h2 {
+  font-size: 1.3rem;
+  margin: 15px;
+  color: #ffd700;
+}
+.blog-post p {
+  margin: 0 15px 20px;
+  color: #ccc;
+}
+.blog-post .tag {
+  margin: 0 15px 15px;
+  display: inline-block;
+  background: #ffd700;
+  color: #111;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+/* Filtro por categoría (solo CSS) */
+.blog-tags {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 30px 0 10px;
+  flex-wrap: wrap;
+}
+.blog-tags input[type="radio"] {
+  display: none;
+}
+.blog-tags label {
+  cursor: pointer;
+  background: #262626;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  transition: all 0.3s;
+}
+.blog-tags input[type="radio"]:checked + label {
+  background: #ffd700;
+  color: #111;
+}
+/* Scroll reveal */
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Comentarios */
+.comments-container {
+  margin-top: 60px;
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  color: #fff;
+}
+.comments-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+.comment {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+.comment-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+}
+.comment-avatar::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid #444;
+}
+.comment-content {
+  background-color: #2a2a2a;
+  padding: 15px 20px;
+  border-radius: 12px;
+  flex: 1;
+}
+.comment-content h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffd700;
+}
+.comment-content p {
+  margin: 5px 0 0;
+  font-size: 0.95rem;
+}
+/* Formulario de nuevo comentario */
+.comment-form {
+  margin-top: 40px;
+  display: grid;
+  gap: 15px;
+}
+.comment-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #111;
+  border: 1px solid #555;
+  color: #fff;
+  border-radius: 10px;
+  resize: vertical;
+}
+.comment-form textarea:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 5px #ffd700;
+  outline: none;
+}
+.comment-form button {
+  justify-self: start;
+  background-color: #ffd700;
+  color: #111;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.comment-form button:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+}
+/* Accesibilidad */
+a,
+button,
+label {
+  outline: none;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-visible {
+  outline: 2px dashed #ffd700;
+  outline-offset: 4px;
+  border-radius: 6px;
+  transition: outline-offset 0.2s ease;
+}
+/* Tooltips para ARIA */
+[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  color: #ffd700;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+[aria-label]:hover::after,
+[aria-label]:focus::after {
+  opacity: 1;
+}
+/* Scroll Snap */
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 60px;
+}
+html, body {
+  scroll-behavior: smooth;
+  height: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.blog-section {
+  padding-top: 2rem;
+  padding-bottom: 4rem; /* Espacio para llegar bien al fondo */
+}
+.blog-title {
+  margin-top: 0; /* Elimina márgenes colapsados */
+}
+.blog-post figure {
+  overflow: hidden;
+}
+.blog-post img {
+  transition: transform 0.3s ease;
+}
+.blog-post:hover img {
+  transform: scale(1.20);
+}
+/*--- FIN PAGINA BLOG---*/
+
+/* ======== MODO CLARO GENERAL ======== */
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #1a1a1a;
+}
+body.light-mode header,
+body.light-mode footer {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+body.light-mode nav .menu > li > a {
+  color: #1a1a1a;
+}
+body.light-mode nav .menu > li > a:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+body.light-mode .submenu {
+  background-color: #fff;
+}
+body.light-mode .submenu li a {
+  color: #1a1a1a;
+}
+body.light-mode .submenu li a:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+body.light-mode .filtros-clases,
+body.light-mode .horarios {
+  background-color: #fafafa;
+  color: #222;
+}
+body.light-mode .titulo-clases,
+body.light-mode .titulo-horarios,
+body.light-mode .card-content h2 {
+  color: #ffd700;
+}
+body.light-mode .filtros-menu label {
+  background: #e9e9e9;
+  color: #222;
+  border: 1px solid #ffd700;
+}
+body.light-mode .filtros-menu label:hover {
+  background: #ffd700;
+  color: #000;
+}
+body.light-mode .card {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-left: 4px solid #ffd700;
+}
+body.light-mode .card-content p {
+  color: #444;
+}
+body.light-mode .card-img {
+  background-color: #ddd;
+  border-left: 2px solid #bbb;
+}
+/* ========== LOGOS ========== */
+.logo-claro {
+  display: none;
+}
+.logo-oscuro {
+  display: inline;
+}
+body.light-mode .logo-oscuro {
+  display: none;
+}
+body.light-mode .logo-claro {
+  display: inline;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+/* ========== BOTÓN TOGGLE ========== */
+/* === MODO CLARO === */
+body.light-mode #modo-claro-toggle {
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  border-color: #e9e9e9;
+}
+body.light-mode #modo-claro-toggle .emoji {
+  color: #f4c430;
+  transition: color 0.3s ease;
+}
+/* === MODO OSCURO === */
+body:not(.light-mode) #modo-claro-toggle {
+  background-color: #3a3a3a;
+  color: #f4c430;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+body:not(.light-mode) #modo-claro-toggle .emoji {
+  color: #f4c430;
+}
+/* === FIN BOTÓN TOGGLE === */
+
+/*--- Home modo claro ---*/
+body.light-mode .contador-blog {
+  background-color: #f9f9f9;
+  color: #111;
+}
+body.light-mode .box {
+  background-color: #ffffff;
+  color: #111;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+body.light-mode .contador-box h2 {
+  color: #ffd700;
+}
+body.light-mode .contador-box p {
+  color: #444;
+}
+/* BLOG */
+body.light-mode .blog-box h3 {
+  color: #111;
+}
+body.light-mode .blog-box p {
+  color: #555;
+}
+body.light-mode .boton-blog {
+  background-color: #ffd700;
+  color: #111;
+}
+body.light-mode .boton-blog:hover {
+  background-color: #e6c200;
+}
+body.light-mode .testimonios {
+  background-color: #f5f5f5;
+}
+body.light-mode .testimonio {
+  background-color: #ffffff;
+  color: #111;
+}
+body.light-mode .testimonio img {
+  border: 2px solid #ffd700;
+}
+body.light-mode .estrellas {
+  color: #ffd700;
+}
+body.light-mode .testimonios::before {
+  background-color: #ffd700;
+}
+/*---fin Home modo claro---*/
+
+/*---Entrenadores modo claro---*/
+body.light-mode {
+  --main-bg: #f7f7f7;
+  --card-bg: #ffffff;
+  --accent: #ffd700;
+  --text: #111;
+  --highlight: #e0e0e0;
+}
+body.light-mode .skill {
+  width: 90%;
+  margin: 15px auto;
+  text-align: left;
+  color: var(--text);
+}
+body.light-mode .bar {
+  background: var(--highlight);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 12px;
+  margin-top: 4px;
+  width: 100%;
+}
+body.light-mode .fill {
+  background: var(--accent);
+  width: var(--fill);
+  height: 100%;
+  border-radius: 20px;
+  animation: grow 2s ease forwards;
+}
+/*---fin Entrenadores modo claro---*/
+
+/*---formulario modo claro---*/
+:root.modo-toggle {
+  --main-bg: #f5f5f5;
+  --form-bg: #ffffff;
+  --accent: #ffd700;
+  --text: #2a2a2a;
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+}
+.modo-toggle .contact-form,
+.modo-toggle .modal-content {
+  background-color: var(--form-bg) !important;
+  color: var(--text);
+}
+/*---fin fomulario modo claro---*/
+
+/*--- pagina blog modo claro ---*/
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #111;
+}
+body.light-mode .blog-post {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+body.light-mode .blog-post h2 {
+  color: #c90;
+}
+body.light-mode .blog-post p {
+  color: #444;
+}
+body.light-mode .blog-post .tag {
+  background: #c90;
+  color: #fff;
+}
+body.light-mode .blog-tags label {
+  background: #eee;
+  color: #111;
+  border-color: #c90;
+}
+body.light-mode .blog-tags input[type="radio"]:checked + label {
+  background: #c90;
+  color: #fff;
+}
+body.light-mode .comments-container {
+  background-color: #f9f9f9;
+  color: #111;
+}
+body.light-mode .comment-avatar::before {
+  border-color: #bbb;
+}
+body.light-mode .comment-content {
+  background-color: #fff;
+}
+body.light-mode .comment-content h4 {
+  color: #101010; /* Más legible en fondo claro */
+}
+body.light-mode figcaption {
+  background-color: rgba(204, 153, 0, 0.8); /* similar al #c90 */
+  color: #fff;
+}
+body.light-mode .comment-form textarea {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+}
+body.light-mode .comment-form textarea:focus {
+  border-color: #c90;
+  box-shadow: 0 0 5px #c90;
+}
+body.light-mode .comment-form button {
+  background-color: #c90;
+  color: #fff;
+}
+body.light-mode .comment-form button:hover {
+  background-color: #b8860b;
+}
+body.light-mode [aria-label]::after {
+  background-color: #fff;
+  color: #c90;
+}
+/*--- fin pagina blog modo claro ---*/
+
+/*--- Footer en modo claro--- */
+/* Input de email en el footer (modo claro) */
+body.light-mode footer input[type="email"] {
+  background-color: #fff;
+  color: #222;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+body.light-mode footer .social-links a {
+  color: #222 !important; /* Negro suave para el texto/iconos */
+  transition: color 0.3s ease;
+}
+body.light-mode footer .social-links a:hover {
+  color: #f4c430; /* Amarillo suave al pasar el mouse */
+}
+/*--- Fin Footer en modo claro--- */
+/*--- tabla de horarios modo claro---*/
+body.light-mode .horarios {
+  background: #e4e4e4;
+  padding: 40px 20px;
+  color: #222;
+  text-align: center;
+}
+body.light-mode .titulo-horarios {
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+body.light-mode .tabla-horarios table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #222;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+body.light-mode .tabla-horarios th,
+body.light-mode .tabla-horarios td {
+  border: 1px solid #d9ba7b;
+  padding: 10px;
+  text-align: center;
+}
+body.light-mode .tabla-horarios th {
+  background-color: #ffd700;
+  color: #222;
+  font-weight: 600;
+}

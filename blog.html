@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dekus Fit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div data-include="header.html"></div>
+
+  <main class="blog-section">
+    <h1 class="blog-title">Blog de Fitness</h1>
+
+    <!-- Filtro de categorías -->
+    <div class="blog-tags">
+      <input type="radio" name="categoria" id="all" checked>
+      <label for="all">Todos</label>
+
+      <input type="radio" name="categoria" id="nutricion">
+      <label for="nutricion">Nutrición</label>
+
+      <input type="radio" name="categoria" id="entrenamiento">
+      <label for="entrenamiento">Entrenamiento</label>
+
+      <input type="radio" name="categoria" id="bienestar">
+      <label for="bienestar">Bienestar</label>
+    </div>
+
+    <!-- Artículos del blog -->
+    <section class="blog-grid">
+      <article class="blog-post" data-category="nutricion">
+        <figure>
+          <img src="images/comidaproteica.jpg" alt="Alimentos ricos en proteínas">
+          <figcaption>Nutrición</figcaption>
+        </figure>
+        <h2>Alimentos clave para ganar músculo</h2>
+        <p>Una guía rápida sobre las mejores fuentes de proteína para tus entrenamientos.</p>
+        <span class="tag">#Nutrición</span>
+      </article>
+
+      <article class="blog-post" data-category="entrenamiento">
+        <figure>
+          <img src="images/ejerciocioencasa.jpg" alt="Persona entrenando en casa">
+          <figcaption>Entrenamiento</figcaption>
+        </figure>
+        <h2>Entrena en casa sin equipamiento</h2>
+        <p>Rutinas efectivas usando solo tu peso corporal. ¡Sin excusas!</p>
+        <span class="tag">#Entrenamiento</span>
+      </article>
+
+      <article class="blog-post" data-category="bienestar">
+        <figure>
+          <img src="images/personadescansando.jpg" alt="Persona relajándose">
+          <figcaption>Bienestar</figcaption>
+        </figure>
+        <h2>La importancia del descanso en tu progreso</h2>
+        <p>Dormir bien es parte esencial del crecimiento físico y mental.</p>
+        <span class="tag">#Bienestar</span>
+      </article>
+
+      <article class="blog-post" data-category="nutricion">
+        <figure>
+          <img src="images/despuesdeentrenar.jpg" alt="Comida saludable después del entrenamiento">
+          <figcaption>Nutrición</figcaption>
+        </figure>
+        <h2>Qué comer antes y después del gym</h2>
+        <p>Optimiza tu rendimiento con una nutrición estratégica.</p>
+        <span class="tag">#Nutrición</span>
+      </article>
+    </section>
+
+    <!-- Comentarios -->
+    <section class="comments-container" id="comentarios">
+      <h3>Comentarios</h3>
+
+      <div class="comment">
+        <div class="comment-avatar" aria-label="Avatar de usuario"></div>
+        <div class="comment-content">
+          <h4>Lucía Fernández</h4>
+          <time datetime="2025-04-11">11 de abril, 2025</time>
+          <p>¡Excelente artículo! Me encantó la parte de los entrenamientos funcionales, muy bien explicado.</p>
+        </div>
+      </div>
+
+      <div class="comment">
+        <div class="comment-avatar" aria-label="Avatar de usuario"></div>
+        <div class="comment-content">
+          <h4>Martín Gómez</h4>
+          <time datetime="2025-04-10">10 de abril, 2025</time>
+          <p>Muy buena info, estaría genial que agreguen una rutina para principiantes también 🙌</p>
+        </div>
+      </div>
+
+      <form class="comment-form" aria-label="Agregar un comentario">
+        <h4>Dejá tu comentario</h4>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <textarea name="mensaje" rows="4" placeholder="Tu comentario..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <div data-include="footer.html"></div>
+  <script src="js/include.js"></script>
+  <script src="js/modoscuro.js"></script>
+</body>
